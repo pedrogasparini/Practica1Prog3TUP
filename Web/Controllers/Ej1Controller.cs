@@ -5,7 +5,7 @@ namespace Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Ej1Controller : ControllerBase
+    public class EjController : ControllerBase
     {
         [HttpGet()]
         public int Get([FromQuery] int var1, [FromQuery] int var2, [FromQuery] int var3)
