@@ -5,14 +5,17 @@ namespace Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Ej1Controller : ControllerBase
+    public class Ej6Controller : Controller
     {
         [HttpGet()]
-        public int Get([FromQuery] int var1, [FromQuery] int var2, [FromQuery] int var3)
+        public string Get()
         {
+            int[] numeros = new int[100];
+
+            for (int i = 0; i < 100; i++) {
+                return ($"Numero:{i}");
+            }
             
-            int result = var1 + var2 + var3;
-            return result;
         }
     }
 }
