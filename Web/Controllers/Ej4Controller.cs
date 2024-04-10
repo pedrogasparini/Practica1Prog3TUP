@@ -10,10 +10,18 @@ namespace Web.Controllers
     public class Ej4Controller : ControllerBase
     {
         [HttpGet()]
-        public string Get([FromQuery] string nombre, [FromQuery] string anios)
+        public string Get([FromQuery] int num1, [FromQuery] int num2)
         {
-            string result = $"Te llamas {nombre} y tienes {anios} años";
-            return result;
+            if (num1 > num2)
+                return ($"El numero mayor es el numero 1: {num1}");
+
+            else if (num1 < num2)
+                return ($"El numero mayor es el numero 2: {num2}");
+
+            else return ("Ambos son iguales");
         }
+
+
+
     }
 }
